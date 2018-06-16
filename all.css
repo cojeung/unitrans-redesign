@@ -1,0 +1,331 @@
+/*
+   #D50742 = logo red
+   #707070 = some dark gray
+*/
+
+html {
+  position: relative;
+  min-height: 100%
+}
+
+body {
+  /* font-family: "Roboto", sans-serif; */
+  font-family: 'Didact Gothic', sans-serif;
+  /* font-size: 15px; */
+  font-weight: 400;
+  /* color: #4F4F4F; */
+  background-color: white; /*#E0E0E0;*/
+  color: dimgray;
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 100% !important;
+    max-width: 100% !important
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    overflow-x: hidden;
+    padding: 0
+  }
+}
+
+main {
+  margin: 50px;
+}
+
+
+.footer {
+    bottom: 0;
+    left: 0;
+    background-color: #D50742;
+    text-align: center;
+    padding: 20px;
+    padding-top: 25px;
+    /* position:absolute; */
+    /* width: 100%; */
+    margin-bottom: 0 !important;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.footer a:hover {
+    font-weight: 700;
+    /* -webkit-transform: scale(1.2); */
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {outline:0;}
+
+
+/*---------------------------------------------------*/
+/*---------------- HEADER BANNER --------------------*/
+/*---------------------------------------------------*/
+    div.main_banner {
+      display: inline;
+      flex-direction: column;
+      align-content: center;
+      width: 300px;
+      height: 90px;
+      color: dimgray;
+      /* background-color:blue; */
+    }
+
+    div.main_banner h1 {
+      color: dimgray;
+      cursor: pointer;
+    }
+
+    h1 {
+      font-size: 50px;
+      text-align: center;
+      font-weight: 700;
+      /* padding: 30px; */
+      flex: 1 0 auto;
+      /* cursor: pointer; */
+      color: #D50742;
+    }
+
+    img#bus_icon {
+      width: 100px;
+      height: auto;
+      flex: 1 0 auto;
+      background-color: red;
+    }
+
+
+/*---------------------------------------------------*/
+/*-------------------- NAV BAR ----------------------*/
+/*---------------------------------------------------*/
+
+/* from http://css-snippets.com/simple-horizontal-navigation/#code */
+    /* div.nav {
+      border-style: solid;
+      border-width: 2px 0 2px 0;
+      border-color: dimgray;
+
+      list-style:none;
+      margin:0;
+      padding:0;
+      text-align:center;
+      font-size: 20px;
+      font-weight: 700;
+      color: dimgray;
+    } */
+
+    div.nav {
+      /* border-style: solid;
+      border-width: 2px 0 2px 0;
+      border-color: dimgray; */
+
+      list-style:none;
+      margin:0;
+      padding:0;
+      text-align:center;
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      background-color: #D50742;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .nav ul {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .nav li{
+      display:inline-block;
+      padding: 0 50px 0 50px;
+    }
+    .nav a{
+      display:inline-block;
+      padding: 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    .nav li a:hover {
+      color: white;
+      border-bottom: 2px solid white;
+      padding-bottom: 3px;
+    }
+
+
+    /* .nav a.selected:link, a.selected:visited {
+      border-bottom: 2px solid gray;
+      padding-bottom: 3px;
+      background-color: #D50742;
+      color: white;
+    } */
+    main {
+        transition: margin-top .25s;
+    }
+
+    #nav_dropdown {
+        height: 0;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 168px;
+        left: 0;
+        background-color: #D50742;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-left: 60px;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    #nav_dropdown .closebtn {
+        position: absolute;
+        top: -30px;
+        right: 10px;
+        font-size: 70px;
+        color: white;
+        /* margin-bottom: 50px; */
+        transition: all .1s ease-in-out;
+    }
+
+    #nav_dropdown .closebtn:hover {
+        text-decoration: none;
+        /* color: dimgray; */
+        transform: scale(1.2);
+    }
+
+    #nav_dropdown div {
+        padding: 15px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        /* flex: 0 0 25%; */
+    }
+
+    #nav_dropdown h1 {
+      color: white;
+      font-size: 20px;
+      text-align: left;
+    }
+
+    div#nav_dropdown button{
+      width:50px;
+      height:50px;
+      border-radius: 50%;
+      border: solid 0px white;
+      color: white;
+      text-align:center;
+      text-decoration:none;
+      font-size: 25px;
+      font-weight:400;
+    }
+
+    #nav_dropdown button:hover{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.16);
+    }
+
+    #nav_dropdown ul {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      margin-left: auto;
+      margin-right: auto;
+      /* columns: 4; */
+      column-gap: 10px;
+    }
+
+    #nav_dropdown li{
+      padding-bottom: 10px;
+    }
+
+    div.mu_list {
+      border:none;
+      margin: 10px;
+      flex: 0 0 20%;
+    }
+
+    div.mu_list ul {
+      columns: 4;
+    }
+
+    div.silo_list {
+      border:none;
+      margin: 10px;
+      flex: 0 0 20%;
+    }
+
+    div.silo_list ul {
+      columns: 4;
+    }
+
+    div.hs_list {
+      border:none;
+      margin: 10px;
+      flex: 0 0 20%;
+    }
+
+    div.hs_list ul {
+      columns: 1;
+    }
+
+    div#curr_selection {
+      flex: 0 0 30%;
+      /* background-color: white; */
+      margin: 10px;
+      border-right: solid 2px white;
+      color: white;
+      display: block;
+    }
+
+    div#curr_selection h1 {
+      font-size: 50px;
+      /* text-align: center; */
+    }
+
+    div#curr_selection  h2 {
+      font-size: 20px;
+      /* text-align: center;
+      word-wrap: wrap; */
+    }
+
+    div.hs_list #download_btn {
+        color: white;
+        height:75px;
+        width: 200px;
+        border-radius: 10px;
+        border: solid 2px white;
+        text-decoration:none;
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    div#corner_dropdown {
+        margin-top: 20px;
+        color: white;
+        font-size: 20px;
+        font-weight:400;
+    }
+
+    div#corner_dropdown a{
+        color: white;
+    }
