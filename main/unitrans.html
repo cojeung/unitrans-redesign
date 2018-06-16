@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="google" content="notranslate">
+  <meta name="description" content="ASUCD &amp; The City of Davis">
+  <meta name="theme-color" content="#C8102E">
+
+  <link rel="icon" href="/static/img/unitrans.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"> -->
+
+  <!-- <link rel="stylesheet" href="unitrans.css" type="text/css" /> -->
+  <link rel="stylesheet" href="all.css" type="text/css" />
+  <link rel="stylesheet" href="unitrans.css" type="text/css" />
+
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,700" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <title>Unitrans</title>
+</head>
+<body class="home desktop-home">
+
+  <header>
+    <div class="main_banner" onclick="window.location.href='unitrans.html'">
+      <h1><img id="bus_icon" src="bus_icon.png">Unitrans</h1>
+    </div>
+  </header>
+
+  <div class="nav">
+    <ul>
+      <li><a href="pages/routes.html">Routes</a></li>
+      <li><a href="pages/fares.html">Fares</a></li>
+      <li><a href="pages/news.html">News</a></li>
+      <li><a href="pages/visitors.html">Visitors</a></li>
+      <li><a href="pages/about.html">About</a></li>
+    </ul>
+  </div>
+
+  <h1 style="margin-top: 20px;">Let us help you plan your trip...</h1>
+
+  <main style="margin-top:20px;">
+
+    <div class="bus_lines">
+      <div class="mu"><h1>Memorial Union</h1>
+        <ul class="mu">
+          <li><button type="button" onclick="change_page_from_home('b')">B</button>Sycamore / Drake</li>
+          <li><button type="button" onclick="change_page_from_home('e')">E</button>Downtown / F St / J St</li>
+          <li><button type="button" onclick="change_page_from_home('f')">F</button>Oak Ave / E. Alvarado / N. Anderson</li>
+          <li><button type="button" onclick="change_page_from_home('g')">G</button>Anderson / Alvarado / N. Sycamore</li>
+          <li><button type="button" onclick="change_page_from_home('k')">K</button>Lake Blvd / Arlington</li>
+          <li><button type="button" onclick="change_page_from_home('l')">L</button>E. 8th St / Pole Line / Moore / Loyola</li>
+          <li><button type="button" onclick="change_page_from_home('m')">M</button>Cowell / Drew</li>
+          <li><button type="button" onclick="change_page_from_home('o')">O</button>Shoppers Shuttle / Downtown / Target</li>
+          <li><button type="button" onclick="change_page_from_home('p')">P</button>Davis Perimeter Counter Clockwise</li>
+          <li><button type="button" onclick="change_page_from_home('q')">Q</button>Davis Perimeter Clockwise</li>
+          <li><button type="button" onclick="change_page_from_home('x')">X</button>Residence Halls Loop</li>
+          <li><button type="button" onclick="change_page_from_home('z')">Z</button>Amtrak / 5th St / Target / MU</li>
+        </ul>
+      </div>
+
+
+      <div class="right_col">
+        <div class="silo"><h1>Silo</h1>
+          <ul class="silo">
+            <li><button type="button" onclick="change_page_from_home('a')">A</button>Downtown / 5th St / Alhambra</li>
+            <li><button type="button" onclick="change_page_from_home('c')">C</button>Sycamore / Wake Forest</li>
+            <li><button type="button" onclick="change_page_from_home('d')">D</button>Lake Blvd / Arlington</li>
+            <li><button type="button" onclick="change_page_from_home('j')">J</button>Anderson / Alvarado / N. Sycamore</li>
+            <li><button type="button" onclick="change_page_from_home('l')">L</button>E. 8th St / Pole Line / Moore / Loyola</li>
+            <li><button type="button" onclick="change_page_from_home('v')">V</button>UC Davis West Village</li>
+            <li><button type="button" onclick="change_page_from_home('w')">W</button>Cowell / Lillard / Drummond</li>
+          </ul>
+        </div>
+
+        <div class="high_school"><h1>Davis High/Jr. High</h1>
+          <ul class="high_school">
+            <li><button type="button" onclick="change_page_from_home('t')">T</button>Davis High</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+    </div>   <!-- end div bus_lines -->
+
+    <div class="bottom_section">
+
+      <div class="prediction"><h1 class="prediction">Arrival Predictions</h1>
+        <div class="container predictions-section">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="card predictions-card">
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="predictions-tab" role="tabpanel" aria-labelledby="predictions-tab">
+                    <form class="form form-horizontal arrival-form" id="arrival-form" action="#" method="post">
+                      <div class="form-group">
+                        <label for="route-select" class="form-label">Line:</label>
+                        <select id="route-select" class="form-control rounded route-select">
+                          <option value="A" >A</option>
+                          <option value="B" >B</option>
+                          <option value="C" >C</option>
+                          <option value="D" >D</option>
+                          <option value="E" >E</option>
+                          <option value="F" >F</option>
+                          <option value="G" >G</option>
+                          <option value="J" >J</option>
+                          <option value="K" >K</option>
+                          <option value="L" >L</option>
+                          <option value="M" >M</option>
+                          <option value="O" >O</option>
+                          <option value="P" >P</option>
+                          <option value="Q" >Q</option>
+                          <option value="T" >T</option>
+                          <option value="V" >V</option>
+                          <option value="W" >W</option>
+                          <option value="X" >X</option>
+                          <option value="Z" >Z</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="stop-select" class="form-label">Stop:</label>
+                        <select id="stop-select" class="form-control rounded max-width stop-select"></select>
+                      </div>
+                      <div class="form-group">
+                        <label for="direction-select" class="form-label">Direction:</label>
+                        <select id="direction-select" class="form-control rounded max-width direction-select"></select>
+                      </div>
+                    </form>
+                    <div class="prediction_tab">
+                      <p id="prediction-none" class="prediction-none"><b>There are no predictions for this route.</b></p>
+                      <!-- <p id="prediction-notice" class="prediction-notice"><span class="prefix">Your bus will arrive in: </span><span class="time-mins"><span class="time" id="prediction-time"></span><span class="mins"> mins</span></span></p> -->
+                    </div>
+                  </div>
+                </divW>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="fares">
+      <div id="general_fare">
+        <h1 style="color: white">$1</h1><h2 style="color:white">general admission</h2>
+      </div>
+
+      <div id="student_id_box">
+        <h1 id="unlimited_access">Free & Unlimited Access for</h1><br/>
+
+        <figure>
+          <img id="student_id" src="student_id.png" width="200px">
+            <figcaption>
+              <b>Current UC Davis students with valid student ID.</b><br/>
+              <i>(Also entitled to free unlimited access on Yolobus)</i>
+            </figcaption>
+          </figure>
+
+          <p>
+            <b>Also free for:</b>
+            <ul>
+              <li>
+                <b>Seniors</b> <i>(60 or older with a "Senior Pass")</i>
+              </li>
+              <li>
+                <b>Customers with Disabilities</b> <i>(with "Free Disabled Pass")</i>
+              </li>
+            </ul>
+          </p>
+          <a href="pages/fares.html">More Info &raquo;</a>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+</main>
+
+<script src="unitrans.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5Bo1UufgueBychalyq8njKlRnmZtZmJc&callback=initMap"></script>
+<script type="text/javascript" src="/static/CACHE/js/cd251de2437c.js"></script>
+<script type="text/javascript">
+$(".predictions-section").predictions();
+
+var initMap = function() {
+  $(".locations-section").locations();
+};
+</script>
+
+<script type="text/javascript" src="/static/CACHE/js/f1ba8dda483a.js"></script>
+</body>
+
+<footer class="footer">
+<a href="tel:5307522877">(530) 752-2877</a>  <br/>
+<a href="mailto:unitrans@ucdavis.edu">unitrans@ucdavis.edu</a> <br/>
+<!-- Unversity of California, Davis <br/> -->
+</footer>
+
+</html>

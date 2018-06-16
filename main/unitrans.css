@@ -1,0 +1,239 @@
+/*
+#D50742 = logo red
+#707070 = some dark gray
+*/
+
+div.bus_lines {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+div.bus_lines h1{
+  font-size: 30px;
+  float: left;
+  padding: 10px 10px 0px 10px;
+}
+
+div.bus_lines ul {
+  list-style-type: none;
+  display: inline-block;
+  columns: 2;
+  font-size: 12px;
+}
+
+div.bus_lines li {
+  /* line-height: 80%; */
+  /* vertical-align: middle; */
+}
+
+div.bus_lines button{
+  width:50px;
+  height:50px;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  text-align:center;
+  text-decoration:none;
+  font-size:30px;
+  font-weight:400;
+  margin: 10px 5px 10px 0px;
+}
+
+div.bus_lines button:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.16);
+}
+
+div.mu {
+  border-style: solid;
+  border-width: 2px;
+  border-color: dimgray;
+  margin-right: 20px;
+   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+div.right_col {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  order: 2;
+}
+
+div.silo {
+  border-style: solid;
+  border-width: 2px;
+  border-color: dimgray;
+  margin-bottom: 20px;
+   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+div.high_school {
+  border-style: solid;
+  border-width: 2px;
+  border-color: dimgray;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+div.high_school ul {
+  columns: 3;
+}
+
+
+/*---------------------------------------------------------*/
+/*---------------- ARRIVAL PREDICTIONS --------------------*/
+/*---------------------------------------------------------*/
+div.bottom_section {
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+div.prediction {
+  border-style: solid;
+  border-width: 2px;
+  border-color: dimgray;
+  margin-right: 20px;
+  padding: 20px;
+  flex: 1 1 50%;
+   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+h1.prediction {
+  font-size: 30px;
+  padding: 10px 10px 10px 10px;
+  display: inline;
+  margin:0;
+}
+
+div.card {
+  /* background-color: red; */
+  border: none;
+  width: 150%;
+}
+
+div.form-group {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+div.form-group label {
+
+}
+
+div.form-group select {
+  border: 1px solid dimgray;
+
+}
+
+
+.predictions-section .arrival-form {
+  padding-top: 20px
+}
+
+.predictions-section .prediction {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 15px;
+  margin-top: 15px
+}
+
+.predictions-section .prediction span.prefix {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  margin-top: 6px;
+  color: #828282
+}
+
+.predictions-section .prediction span.time-mins {
+  display: inline-block
+}
+
+.predictions-section .prediction span.time {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 700;
+  margin-right: 5px;
+  margin-left: 10px
+}
+
+.predictions-section .prediction span.mins {
+  display: inline-block;
+  font-size: 12px
+}
+
+.predictions-section .prediction .prediction-none {
+  margin-top: 10px
+}
+
+
+/*---------------------------------------------------------*/
+/*---------------- FARES --------------------*/
+/*---------------------------------------------------------*/
+
+div.fares {
+  border-style: solid;
+  border-width: 2px;
+  border-color: dimgray;
+  width: auto;
+  padding: 20px;
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+div#general_fare {
+  /* border-style: solid;
+  border-width: 2px;
+  border-color: dimgray; */
+  background-color: #D50742;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 20px;
+
+  /* flex: 0 0 30%; */
+
+}
+
+div#general_fare h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+div#general_fare h2 {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1#unlimited_access {
+  color: dimgray;
+  font-weight: 700;
+  text-align: left;
+  font-size: 30px;
+}
+
+figure {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+figcaption {
+  margin-left: 20px;
+}
+
+b {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+div#student_id_box a {
+  font-size: 25px;
+  float: right;
+  color: #D50742;
+}
