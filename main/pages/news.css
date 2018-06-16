@@ -1,0 +1,112 @@
+/*
+   #D50742 = logo red
+   #707070 = some dark gray
+*/
+
+main {
+  display: inline-block;
+  /* overflow: none; */
+}
+
+/* SIDEBAR MENU */
+div.side_nav {
+  background-color: #D50742;
+  color: white;
+  height: auto; /* Full-height: remove this if you want "auto" height */
+  width: 250px; /* Set the width of the sidebar */
+  z-index: 1; /* Stay on top */
+  left: 0;
+  overflow: hidden; /* Disable horizontal scroll */
+  float: left;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: auto;
+  height: 100%;
+  z-index: 1;
+  /* padding-top: 20px; */
+  margin-left: inherit;
+  overflow-x: hidden;
+}
+
+div#all_news_info {
+    margin-top: 0 !important;
+    margin-left: 290px;
+    /* background-color: purple; */
+    overflow: hidden;
+}
+
+div.side_nav a {
+  padding: 10px 10px 10px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border-bottom: solid 1px white;
+}
+
+div.side_nav a#last_child {
+  border-bottom: none;
+}
+
+div.side_nav a:hover{
+  background-color: #FF084F;
+}
+
+/* div.side_nav a:active{
+  border-left: solid 10px dimgray;
+} */
+
+div.side_nav .active {
+    border-left: solid 10px dimgray;
+    border-image: linear-gradient(to right, grey 5px, white 0%) 5;
+
+}
+
+/*------------------------------------*/
+
+hr {
+  /* background-color: gray; */
+  margin: 30px 0 30px 0;
+}
+
+div#featured, #service, #archive {
+  /* border-style: solid;
+  border-width: 2px;
+  border-color: dimgray; */
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+div.topbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.topbar h1 {
+  flex: 0 0 auto;
+  font-size: 30px;
+}
+
+div.info_box h2 {
+  font-size: 20px;
+}
+
+div.info_box a {
+  font-weight: 700;
+  color: #D50742;
+}
+
+
+figure {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+figcaption {
+  margin-left: 10px;
+}

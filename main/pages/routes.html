@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="google" content="notranslate">
+  <meta name="description" content="ASUCD &amp; The City of Davis">
+  <meta name="theme-color" content="#C8102E">
+
+  <link rel="icon" href="/static/img/unitrans.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"> -->
+
+  <!-- <link rel="stylesheet" href="unitrans.css" type="text/css" /> -->
+  <link rel="stylesheet" href="../all.css" type="text/css" />
+  <link rel="stylesheet" href="../bus_info.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="../unitrans.css" type="text/css" /> -->
+    <link rel="stylesheet" href="../routes.css" type="text/css" />
+
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,700" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <title>Unitrans</title>
+</head>
+<body class="home desktop-home">
+
+  <header onmouseover="closeNav()">
+    <div class="main_banner" onclick="window.location.href='../unitrans.html'">
+      <h1><img id="bus_icon" src="../bus_icon.png">Unitrans</h1>
+    </div>
+  </header>
+
+  <div class="nav">
+    <ul>
+      <li><a href="#" onclick="openNav()" onmouseover="openNav()">Routes</a></li>
+      <li><a href="../pages/fares.html">Fares</a></li>
+      <li><a href="../pages/news.html">News</a></li>
+      <li><a href="../pages/visitors.html">Visitors</a></li>
+      <li><a href="../pages/about.html">About</a></li>
+    </ul>
+  </div>
+
+  <div id="nav_dropdown">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Clients</a>
+    <a href="#">Contact</a> -->
+
+    <div id="curr_selection">
+        <p style="font-size: 50px; font-weight: 400;">
+          Please select a line.
+        </p>
+    </div>
+
+    <div class="mu_list"><h1>Memorial Union</h1>
+      <ul class="mu">
+        <li><button type="button" onclick="change_page_else('b')" onmouseover="update_dropdown('B', 'Sycamore / Drake')">B</button></li>
+        <li><button type="button" onclick="change_page_else('e')" onmouseover="update_dropdown('E', 'Downtown / F St / J St')">E</button></li>
+        <li><button type="button" onclick="change_page_else('f')" onmouseover="update_dropdown('F', 'Oak Ave / E. Alvarado / N. Anderson')">F</button></li>
+        <li><button type="button" onclick="change_page_else('g')" onmouseover="update_dropdown('G', 'Anderson / Alvarado / N. Sycamore')">G</button></li>
+        <li><button type="button" onclick="change_page_else('k')" onmouseover="update_dropdown('K', 'Lake Blvd / Arlington')">K</button></li>
+        <li><button type="button" onclick="change_page_else('l')" onmouseover="update_dropdown('L', 'E. 8th St / Pole Line / Moore / Loyola')">L</button></li>
+        <li><button type="button" onclick="change_page_else('m')" onmouseover="update_dropdown('M', 'Cowell / Drew')">M</button></li>
+        <li><button type="button" onclick="change_page_else('o')" onmouseover="update_dropdown('O', 'Shoppers Shuttle / Downtown / Target')">O</button></li>
+        <li><button type="button" onclick="change_page_else('p')" onmouseover="update_dropdown('P', 'Davis Perimeter Counter Clockwise')">P</button></li>
+        <li><button type="button" onclick="change_page_else('q')" onmouseover="update_dropdown('Q', 'Davis Perimeter Clockwise')">Q</button></li>
+        <li><button type="button" onclick="change_page_else('x')" onmouseover="update_dropdown('X', 'Residence Halls Loop')">X</button></li>
+        <li><button type="button" onclick="change_page_else('z')" onmouseover="update_dropdown('Z', 'Amtrak / 5th St / Target / MU')">Z</button></li>
+      </ul>
+    </div>
+
+      <div class="silo_list"><h1>Silo</h1>
+        <ul class="silo">
+          <li><button type="button" onclick="change_page_else('a')" onmouseover="update_dropdown('A', 'Downtown / 5th St / Alhambra')">A</button></li>
+          <li><button type="button" onclick="change_page_else('c')" onmouseover="update_dropdown('C', 'Sycamore / Wake Forest')">C</button></li>
+          <li><button type="button" onclick="change_page_else('d')" onmouseover="update_dropdown('D', 'Lake Blvd / Arlington')">D</button></li>
+          <li><button type="button" onclick="change_page_else('j')" onmouseover="update_dropdown('J', 'Anderson / Alvarado / N. Sycamore')">J</button></li>
+          <li><button type="button" onclick="change_page_else('l')" onmouseover="update_dropdown('L', 'E. 8th St / Pole Line / Moore / Loyola')">L</button></li>
+          <li><button type="button" onclick="change_page_else('v')" onmouseover="update_dropdown('V', 'UC Davis West Village')">V</button></li>
+          <li><button type="button" onclick="change_page_else('w')" onmouseover="update_dropdown('W', 'Cowell / Lillard / Drummond')">W</button></li>
+        </ul>
+      </div>
+
+      <div class="hs_list"><h1>Davis High/Jr. High</h1>
+        <ul class="high_school">
+          <li><button type="button" onclick="change_page_else('t')" onmouseover="update_dropdown('T', 'Davis High')">T</button></li>
+        </ul>
+        <div id="corner_dropdown">
+          <a href="routes.html">Expanded View Here &raquo;</a>
+          <button id="download_btn">Download Complete Schedule</button>
+        </div>
+      </div>
+
+
+
+  </div>
+
+  <main onmouseover="closeNav()">
+
+    <div class="please_select">
+      <div class="info_title_line">
+        <h1 class="info_title_line" style="font-size: 30px">Please select a bus line...</h1>
+      </div>
+
+        <div class="bus_lines">
+          <div class="mu"><h1>Memorial Union</h1>
+            <ul class="mu">
+              <li><button type="button" onclick="change_page_else('b')">B</button>Sycamore / Drake</li>
+              <li><button type="button" onclick="change_page_else('e')">E</button>Downtown / F St / J St</li>
+              <li><button type="button" onclick="change_page_else('f')">F</button>Oak Ave / E. Alvarado / N. Anderson</li>
+              <li><button type="button" onclick="change_page_else('g')">G</button>Anderson / Alvarado / N. Sycamore</li>
+              <li><button type="button" onclick="change_page_else('k')">K</button>Lake Blvd / Arlington</li>
+              <li><button type="button" onclick="change_page_else('l')">L</button>E. 8th St / Pole Line / Moore / Loyola</li>
+              <li><button type="button" onclick="change_page_else('m')">M</button>Cowell / Drew</li>
+              <li><button type="button" onclick="change_page_else('o')">O</button>Shoppers Shuttle / Downtown / Target</li>
+              <li><button type="button" onclick="change_page_else('p')">P</button>Davis Perimeter Counter Clockwise</li>
+              <li><button type="button" onclick="change_page_else('q')">Q</button>Davis Perimeter Clockwise</li>
+              <li><button type="button" onclick="change_page_else('x')">X</button>Residence Halls Loop</li>
+              <li><button type="button" onclick="change_page_else('z')">Z</button>Amtrak / 5th St / Target / MU</li>
+            </ul>
+          </div>
+
+            <div class="silo"><h1>Silo</h1>
+              <ul class="silo">
+                <li><button type="button" onclick="change_page_else('a')">A</button>Downtown / 5th St / Alhambra</li>
+                <li><button type="button" onclick="change_page_else('c')">C</button>Sycamore / Wake Forest</li>
+                <li><button type="button" onclick="change_page_else('d')">D</button>Lake Blvd / Arlington</li>
+                <li><button type="button" onclick="change_page_else('j')">J</button>Anderson / Alvarado / N. Sycamore</li>
+                <li><button type="button" onclick="change_page_else('l')">L</button>E. 8th St / Pole Line / Moore / Loyola</li>
+                <li><button type="button" onclick="change_page_else('v')">V</button>UC Davis West Village</li>
+                <li><button type="button" onclick="change_page_else('w')">W</button>Cowell / Lillard / Drummond</li>
+              </ul>
+            </div>
+
+            <div class="high_school"><h1>Davis High/Jr. High</h1>
+              <ul class="high_school">
+                <li><button type="button" onclick="change_page_else('t')">T</button>Davis High</li>
+              </ul>
+            </div>
+
+
+    </div>
+  </div>
+
+
+
+</main>
+
+<script src="../unitrans.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5Bo1UufgueBychalyq8njKlRnmZtZmJc&callback=initMap"></script>
+<script type="text/javascript" src="/static/CACHE/js/cd251de2437c.js"></script>
+<script type="text/javascript">
+$(".predictions-section").predictions();
+
+var initMap = function() {
+  $(".locations-section").locations();
+};
+</script>
+
+
+
+<script type="text/javascript" src="/static/CACHE/js/f1ba8dda483a.js"></script>
+</body>
+
+<footer class="footer">
+<a href="tel:5307522877">(530) 752-2877</a>  <br/>
+<a href="mailto:unitrans@ucdavis.edu">unitrans@ucdavis.edu</a> <br/>
+<!-- Unversity of California, Davis <br/> -->
+</footer>
+
+</html>

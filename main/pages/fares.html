@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="google" content="notranslate">
+  <meta name="description" content="ASUCD &amp; The City of Davis">
+  <meta name="theme-color" content="#C8102E">
+
+  <link rel="icon" href="/static/img/unitrans.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <!-- <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"> -->
+
+  <!-- <link rel="stylesheet" href="unitrans.css" type="text/css" /> -->
+  <link rel="stylesheet" href="../all.css" type="text/css" />
+  <!-- <link rel="stylesheet" href="../bus_info.css" type="text/css" /> -->
+  <!-- <link rel="stylesheet" href="../unitrans.css" type="text/css" /> -->
+  <link rel="stylesheet" href="fares.css" type="text/css" />
+
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,500,700" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <title>Unitrans</title>
+</head>
+<body class="home desktop-home" id="top">
+
+  <header onmouseover="closeNav()">
+    <div class="main_banner" onclick="window.location.href='../unitrans.html'">
+      <h1><img id="bus_icon" src="../bus_icon.png">Unitrans</h1>
+    </div>
+  </header>
+
+  <div class="nav">
+    <ul>
+      <li><a href="#" onclick="openNav()" onmouseover="openNav()">Routes</a></li>
+      <li><a href="../pages/fares.html">Fares</a></li>
+      <li><a href="../pages/news.html">News</a></li>
+      <li><a href="../pages/visitors.html">Visitors</a></li>
+      <li><a href="../pages/about.html">About</a></li>
+    </ul>
+  </div>
+
+  <div id="nav_dropdown">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div id="curr_selection">
+        <p style="font-size: 50px; font-weight: 400;">
+          Please select a line.
+        </p>
+    </div>
+
+    <div class="mu_list"><h1>Memorial Union</h1>
+      <ul class="mu">
+        <li><button type="button" onclick="change_page_else('b')" onmouseover="update_dropdown('B', 'Sycamore / Drake')">B</button></li>
+        <li><button type="button" onclick="change_page_else('e')" onmouseover="update_dropdown('E', 'Downtown / F St / J St')">E</button></li>
+        <li><button type="button" onclick="change_page_else('f')" onmouseover="update_dropdown('F', 'Oak Ave / E. Alvarado / N. Anderson')">F</button></li>
+        <li><button type="button" onclick="change_page_else('g')" onmouseover="update_dropdown('G', 'Anderson / Alvarado / N. Sycamore')">G</button></li>
+        <li><button type="button" onclick="change_page_else('k')" onmouseover="update_dropdown('K', 'Lake Blvd / Arlington')">K</button></li>
+        <li><button type="button" onclick="change_page_else('l')" onmouseover="update_dropdown('L', 'E. 8th St / Pole Line / Moore / Loyola')">L</button></li>
+        <li><button type="button" onclick="change_page_else('m')" onmouseover="update_dropdown('M', 'Cowell / Drew')">M</button></li>
+        <li><button type="button" onclick="change_page_else('o')" onmouseover="update_dropdown('O', 'Shoppers Shuttle / Downtown / Target')">O</button></li>
+        <li><button type="button" onclick="change_page_else('p')" onmouseover="update_dropdown('P', 'Davis Perimeter Counter Clockwise')">P</button></li>
+        <li><button type="button" onclick="change_page_else('q')" onmouseover="update_dropdown('Q', 'Davis Perimeter Clockwise')">Q</button></li>
+        <li><button type="button" onclick="change_page_else('x')" onmouseover="update_dropdown('X', 'Residence Halls Loop')">X</button></li>
+        <li><button type="button" onclick="change_page_else('z')" onmouseover="update_dropdown('Z', 'Amtrak / 5th St / Target / MU')">Z</button></li>
+      </ul>
+    </div>
+
+      <div class="silo_list"><h1>Silo</h1>
+        <ul class="silo">
+          <li><button type="button" onclick="change_page_else('a')" onmouseover="update_dropdown('A', 'Downtown / 5th St / Alhambra')">A</button></li>
+          <li><button type="button" onclick="change_page_else('c')" onmouseover="update_dropdown('C', 'Sycamore / Wake Forest')">C</button></li>
+          <li><button type="button" onclick="change_page_else('d')" onmouseover="update_dropdown('D', 'Lake Blvd / Arlington')">D</button></li>
+          <li><button type="button" onclick="change_page_else('j')" onmouseover="update_dropdown('J', 'Anderson / Alvarado / N. Sycamore')">J</button></li>
+          <li><button type="button" onclick="change_page_else('l')" onmouseover="update_dropdown('L', 'E. 8th St / Pole Line / Moore / Loyola')">L</button></li>
+          <li><button type="button" onclick="change_page_else('v')" onmouseover="update_dropdown('V', 'UC Davis West Village')">V</button></li>
+          <li><button type="button" onclick="change_page_else('w')" onmouseover="update_dropdown('W', 'Cowell / Lillard / Drummond')">W</button></li>
+        </ul>
+      </div>
+
+      <div class="hs_list"><h1>Davis High/Jr. High</h1>
+        <ul class="high_school">
+          <li><button type="button" onclick="change_page_else('t')" onmouseover="update_dropdown('T', 'Davis High')">T</button></li>
+        </ul>
+        <div id="corner_dropdown">
+          <a href="routes.html">Expanded View Here &raquo;</a>
+          <button id="download_btn">Download Complete Schedule</button>
+        </div>
+      </div>
+
+
+
+  </div>
+
+  <main onmouseover="closeNav()">
+
+      <div class="side_nav" id="side_nav">
+        <a class="active" href="#rides">Rides</a>
+        <a href="#valid">Valid Passes</a>
+        <a href="#other">Other Passes and Accepted Fares</a>
+        <a href="#unaccepted" id="last_child">Unaccepted Passes and Tickets</a>
+        <a id="download_fare">Download Fare Poster</a>
+
+    </div>
+
+    <script>
+      window.onscroll = function() { myFunction()};
+      var header = document.getElementById("side_nav");
+      var sticky = header.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    </script>
+
+    <!-- <h1 style="color: dimgray; text-align: left">Under construction...</h1> -->
+    <div id="all_fares_info">
+      <div id="rides">
+        <div class="info_box">
+          <div class="topbar">
+            <h1>Single Ride</h1>
+            <h1 style="color:darkgray">$1.00 ($1.25 starting 8/6/18)</h1>
+          </div>
+          <h2>(Ages 5-59)</h2>
+          Up to two children under the age of
+          five ride free per one fare paying adult.
+        </div><hr>
+
+        <div class="info_box">
+          <div class="topbar">
+            <h1>UCD Undergraduate Student</h1>
+            <h1 style="color:darkgray">Unlimited access</h1>
+          </div>
+          <h2>(Current Students)</h2>
+          <figure>
+            <img id="student_id" src="../student_id.png" width="300px">
+              <figcaption>
+                Free access by showing a current Registration/Student ID card.
+                <br/><br/>
+                Without Registration/Student ID card, fare is $1.00 ($1.25 starting 8/6/18).
+                No photocopies or digital images accepted because drivers cannot
+                determine their validity.
+                <br/><br/>
+                A valid undergraudate UC Davis ID also entitles holder to
+                unlimited access on YoloBus.
+              </figcaption>
+            </figure>
+        </div><hr>
+
+        <div class="info_box">
+          <div class="topbar">
+            <h1>Seniors</h1>
+            <h1 style="color:darkgray">Unlimited Access</h1>
+          </div>
+          <h2>(Ages 60+)</h2>
+          Free access with a Senior Pass, available for pick-up from the
+          <a href="http://cityofdavis.org/city-hall/parks-and-community-services/senior-services">
+            Davis Senior Center</a> on 7th and A
+          or the <a href="about.html">Unitrans Business Office</a> (5 South Hall, UCD).
+          <br/><br/>
+          Driver may request ID for verification.  Without a Senior Pass or
+          Medicare card, the fare is $1.00 ($1.25 starting 8/16/18).
+          <br/><br/>
+          Call the Davis Senior Center at <a href="tel:5307575696">(530) 757-5696</a>  for more information.
+        </div><hr>
+
+        <div class="info_box">
+          <div class="topbar">
+            <h1>Customers with Disabilities</h1>
+            <h1 style="color:darkgray">Unlimited Access</h1>
+          </div>
+          Free access with Free Disabled Pass.
+          <a href>Click here for application form and list of eligibility
+          criteria for unlimited access fare-free service.</a>
+          <br /><br />
+          A doctor's signature is required to receive the pass.
+          <br/><br/>
+          Driver may request ID for verification.  Without a Denior Pass or partner
+          transit provider or Medicare card, the fare is $1.00 ($1.25 starting 8/16/18).
+        </div><hr>
+
+        <div class="info_box">
+          <div class="topbar">
+            <h1>Ten-Ride Ticket</h1>
+            <h1 style="color:darkgray">$6.00 ($7.50 starting 7/1/18)</h1>
+          </div>
+          <figure>
+            <img id="student_id" src="../unitrans10ride.png" width="300px">
+              <figcaption>
+                Available for sale at
+                <ul style="list-style-type:none">
+                  <li style="margin-top:10px">
+                    <a href="about.html">Unitrans Business Office</a> (5 South Hall, UCD)
+                  </li>
+                  <li style="margin-top:10px">
+                    <a href="http://cityofdavis.org/city-hall">Davis City Hall</a> (Parks and Community Service, 23 Russell Blvd)
+                  </li>
+                  <li style="margin-top:10px">
+                    <a href="http://taps.ucdavis.edu/">UCD Transportation and Parking Services</a> (TAPS Building, north of West Entry Parking Structure)
+                  </li>
+                </ul>
+                and by phone <a href="tel:5307572877">(530) 752-2877</a> with credit card.
+              </figcaption>
+            </figure>
+        </div>
+
+
+
+      </div>
+
+      <div id="valid">
+        <hr style="height:10px;border:none;color:dimgray;background-color:dimgray;" />
+        <h1>Valid Passes</h1>
+        <hr style="height:10px;border:none;color:dimgray;background-color:dimgray;" />
+
+        <div class="info_box">
+          <div class="topbar">
+            <h1>Monthly Pass</h1>
+            <h1 style="color:darkgray">$25.00 ($30 starting 7/1/18)</h1>
+          </div>
+          Available for sale at
+          <ul style="list-style-type:none">
+            <li style="margin-top:10px">
+              <a href="about.html">Unitrans Business Office</a> (5 South Hall, UCD)
+            </li>
+            <li style="margin-top:10px">
+              <a href="http://cityofdavis.org/city-hall">Davis City Hall</a> (Parks and Community Service, 23 Russell Blvd)
+            </li>
+            <li style="margin-top:10px">
+              <a href="http://taps.ucdavis.edu/">UCD Transportation and Parking Services</a> (TAPS Building, north of West Entry Parking Structure)
+            </li>
+          </ul>
+          and by phone <a href="tel:5307572877">(530) 752-2877</a> with credit card.
+        </div><hr>
+
+        <div class="info_box">
+          <div class="topbar">
+            <h1>Quarterly Pass</h1>
+            <h1 style="color:darkgray">$64.00 ($77 starting 7/1/18)</h1>
+          </div>
+          Available for sale at
+          <ul style="list-style-type:none">
+            <li style="margin-top:10px">
+              <a href="about.html">Unitrans Business Office</a> (5 South Hall, UCD)
+            </li>
+            <li style="margin-top:10px">
+              <a href="http://taps.ucdavis.edu/">UCD Transportation and Parking Services</a> (TAPS Building, north of West Entry Parking Structure)
+            </li>
+          </ul>
+          and by phone <a href="tel:5307572877">(530) 752-2877</a> with credit card.
+          <br/><br/>
+          <b>Fall 2017 Pass</b> valid from 9/18/17 – 1/7/18 <br/>
+          <b>Winter 2018 Pass</b> valid from 1/1/18 – 4/1/18<br/>
+          <b>Spring 2018 Pass</b> valid from 3/26/18 – 6/17/18<br/>
+          <b>Summer 2018 Pass</b> valid from 6/18/18 – TBA
+        </div><hr>
+
+        <div class="info_box">
+          <div class="topbar">
+            <h1>Annual Pass</h1>
+            <h1 style="color:darkgray">$190</h1>
+          </div>
+          Based on a July 1-June 30 time frame, these passes are available at
+          <ul style="list-style-type:none">
+            <li style="margin-top:10px">
+              <a href="about.html">Unitrans Business Office</a> (5 South Hall, UCD)
+            </li>
+            <li style="margin-top:10px">
+              <a href="http://taps.ucdavis.edu/">UCD Transportation and Parking Services</a> (TAPS Building, north of West Entry Parking Structure)
+            </li>
+          </ul>
+          Available after June 15 for the following year.
+        </div><hr>
+
+      </div>
+
+      <div id="other">
+        <hr style="height:10px;border:none;color:dimgray;background-color:dimgray;" />
+        <h1>Other Passes and Accepted Fares</h1>
+        <hr style="height:10px;border:none;color:dimgray;background-color:dimgray;" />
+
+        <h1 style="font-size: 30px; text-align:left">Under construction...</h1>
+      </div>
+
+      <div id="unaccepted">
+        <hr style="height:10px;border:none;color:dimgray;background-color:dimgray;" />
+        <h1>Passes and Tickets Not Accepted</h1>
+        <hr style="height:10px;border:none;color:dimgray;background-color:dimgray;" />
+
+        <h1 style="font-size: 30px; text-align:left">Under construction...</h1>
+      </div>
+    </div>
+
+
+  </main>
+
+
+</div>
+
+
+<script src="../unitrans.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD5Bo1UufgueBychalyq8njKlRnmZtZmJc&callback=initMap"></script>
+<script type="text/javascript" src="/static/CACHE/js/cd251de2437c.js"></script>
+<script type="text/javascript">
+$(".predictions-section").predictions();
+
+var initMap = function() {
+  $(".locations-section").locations();
+};
+</script>
+
+<script>
+  $(document).ready(function () {
+    $(document).on("scroll", onScroll);
+
+    //smoothscroll
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        $(document).off("scroll");
+
+        $('a').each(function () {
+            $(this).removeClass('active');
+        })
+        $(this).addClass('active');
+
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $('html, main').stop().animate({  //$('html, body').stop().animate({
+            'scrollTop': $target.offset().top+2
+        }, 500, 'swing', function () {
+            window.location.hash = target;
+            $(document).on("scroll", onScroll);
+        });
+    });
+});
+
+function onScroll(event){
+    var scrollPos = $(document).scrollTop();
+    $('#side_nav a').each(function () {
+        var currLink = $(this);
+        var refElement = $(currLink.attr("href"));
+        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            $('#side_nave a').removeClass("active");
+            currLink.addClass("active");
+        }
+        else{
+            currLink.removeClass("active");
+        }
+    });
+}
+
+</script>
+
+
+<script type="text/javascript" src="/static/CACHE/js/f1ba8dda483a.js"></script>
+</body>
+
+<footer class="footer">
+  <a href="tel:5307522877">(530) 752-2877</a>  <br/>
+  <a href="mailto:unitrans@ucdavis.edu">unitrans@ucdavis.edu</a> <br/>
+  <!-- Unversity of California, Davis <br/> -->
+</footer>
+</html>
